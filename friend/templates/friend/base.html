@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<html>
+  <head>
+      <title>SteemFriend - Find My Best Friend On Steemit</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Pacifico|Passion+One|Patua+One" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>SteemFriend</h1>
+    </div>
+    <div class="body">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="page-footer">
+    </div>
+  </body>
+</html>

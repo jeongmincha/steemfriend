@@ -1,29 +1,13 @@
-{% load staticfiles %}
-<html>
-  <head>
-      <title>SteemFriend - Find My Best Friend On Steemit</title>
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Pacifico|Passion+One|Patua+One" rel="stylesheet">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  </head>
-  <body>
-    <div class="page-header">
-      <h1>SteemFriend</h1>
-    </div>
-    <div class="body">
-      <center class="body-center">
-        <h1>Who's your best friend on steemit?</h1>
-        <p>Please write your account name on steemit.</p>
-        <form method="post">
-          <input class="input-accountname" placeholder="@jeongmincha" type="text" name="account" />
-          <br /><br />
-          <a class="w3-btn w3-blue" type="submit" value="Check My Friends">Check My Friends!</button>
-        </form>
-      </center>
-    </div>
-    <div class="page-footer">
-    </div>
-  </body>
-</html>
+{% extends 'friend/base.html' %}
+
+{% block content %}
+<center class="body-center">
+  <h1>Who's your best friend on steemit?</h1>
+  <p>Please write your account name on steemit.</p>
+  <form method="post">
+    <input class="input-accountname" placeholder="@jeongmincha" type="text" name="account" />
+    <br /><br />
+    <a class="w3-btn w3-blue" type="submit" value="Check My Friends">Check My Friends!</button>
+  </form>
+</center>
+{% endblock %}
