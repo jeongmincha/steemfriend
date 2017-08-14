@@ -13,7 +13,7 @@ def find_friends(request):
         if account == "":
             return redirect("/")
         else:
-            data = get_permlinks(account)
+            data = [('a', 10),('b',9),('c',8),('d',7),('e',6),('f',5)]
             return friends_results(request, account, data)
     else:
         return render(request, 'friend/calculating.html', {})

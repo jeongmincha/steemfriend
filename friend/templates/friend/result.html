@@ -1,8 +1,45 @@
 {% extends 'friend/base.html' %}
 
 {% block content %}
-<center class="body-center">
+<div class="result-container">
   <p>Here is the result!</p>
-  <p>{{ friends }}</p>
-</center>
+  <div>
+    <div class="friend-row">
+      <div class="friend-row-name">
+        <span>Account Name</span>
+      </div>
+      <div class="friend-row-score">
+        <span>Friend Score</span>
+      </div>
+    </div>
+    {% for name, score in friends %}
+      {% if forloop.counter < 4 %}
+      <div class="friend-row-top">
+        <div class="friend-row-name">
+          <span>@{{ name }}</span>
+        </div>
+        <div class="friend-row-score">
+          <span>{{ score }}</span>
+        </div>
+      </div>
+      {% else %}
+      <div class="friend-row">
+        <div class="friend-row-name">
+          <span>@{{ name }}</span>
+        </div>
+        <div class="friend-row-score">
+          <span>{{ score }}</span>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div>
+    <p>Want to try another person?</p>
+    <form action="{% url 'friend:index' %}" method="get">
+      <button class="w3-btn w3-blue" type="submit" value="Check My Friends">Go Back</button>
+    </form>
+  </div>
+</div>
+
 {% endblock %}
