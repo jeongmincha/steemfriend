@@ -1,5 +1,6 @@
 venv/
 polls/__pycache__/
+blog/__pycache__/
 steemfriend/__pycache__/
 friend/__pycache__/
 *.pyc
