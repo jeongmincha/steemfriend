@@ -4,9 +4,9 @@
 <center class="body-center">
   <h1>Who's your best friend on steemit?</h1>
   <p>Please write your account name on steemit.</p>
-  <form action="{% url 'friend:friends' 'jeongmincha' %}" method="post">
+  <form action="{% url 'friend:find_friends' %}" method="post">
     {% csrf_token %}
-    <input class="input-accountname" placeholder="@jeongmincha" type="text" name="account" />
+    <input class="input-accountname" placeholder="jeongmincha" type="text" name="account" required/>
     <br /><br />
     <button class="w3-btn w3-blue" type="submit" value="Check My Friends">Check My Friends!</button>
   </form>

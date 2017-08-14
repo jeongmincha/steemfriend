@@ -19,6 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
-    # url(r'', include('friend.urls')),
-    url(r'', include('blog.urls')),
+    url(r'', include('friend.urls')),
+    # url(r'', include('blog.urls')),
 ]

@@ -1,5 +1,6 @@
 .page-header {
-  background-color: #1a5099;
+  /*background-color: #1a5099;*/
+  
   margin-top: 0;
   padding: 20px 20px 20px 40px;
   z-index: 1;
@@ -13,12 +14,12 @@
 
 .body {
   width: 100%;
-  height: 1000px;
+  height: 500px;
   display: table;
   position: absolute;
   margin-top: -25;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('img/people-2567915_1920.jpg');
+    url('../img/people-2567915_1920.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
