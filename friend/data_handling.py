@@ -97,7 +97,9 @@ def get_reply_counter(account, permlinks=None):
 
 
 def get_best_friend_list(account):
+    print ('get_best_friend_list()')
     permlinks = get_permlinks(account)
+    # print ('permlinks: ' + permlinks)
     vote_counter = get_vote_counter(account, permlinks)
     reply_counter = get_reply_counter(account, permlinks)
 
@@ -108,8 +110,5 @@ def get_best_friend_list(account):
     for k in reply_counter.keys():
         friend_factor[k] += reply_counter[k] * 1
 
-    friends = []
-    for item in friend_factor.most_common():
-        friends.append(item[0])
-
-    return friends[1:]
+    print (friend_factor)
+    return friend_factor.most_common()[1:]
