@@ -6,5 +6,6 @@ from .models import User
 def index(request):
     return render(request, 'friend/index.html', {})
 
-def friends(request):
-    return render(request, 'friends/result.html', {})
+def friends(request, account):
+    print (account)
+    return render(request, 'friend/result.html', {'account': account})
