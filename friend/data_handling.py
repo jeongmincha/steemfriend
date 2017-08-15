@@ -16,6 +16,21 @@ def post_database_api(style, params):
     return json.loads(text)
 
 
+def get_state(path):
+    return post_database_api('get_state', [path])['result']
+
+
+def get_recent_permlinks(account):
+    state = get_state('@' + str(account))
+    permlinks = []
+    tmp_permlinks = state['accounts'][account]['blog']
+    for permlink in tmp_permlinks:
+        author, permlink = permlink.split("/")
+        if author == account:
+            permlinks.append(permlink)
+    return permlinks
+    
+
 def get_num_account_history(account):
     hist = post_database_api('get_account_history', [account, -1, 0])
     return int(hist['result'][0][0]) + 1
