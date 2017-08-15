@@ -2,6 +2,14 @@
 
 {% block content %}
 <center class="body-center">
-  <p>We're calculating friendships between you and your friends...</p>
+  {% if account %}
+    <h1>Thanks! @{{ account }}. </h1>
+    <p>We're calculating friendships between you and your friends...</p>
+    <p>It may take about a minute.</p>
+    <div class="loader"></div>
+  {% else %}
+    <p>You came here in wrong way. </p>
+    <p>Please go back home and try again.</p>
+  {% endif %}
 </center>
 {% endblock %}

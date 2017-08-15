@@ -10,11 +10,7 @@ def index(request):
 def find_friends(request):
     if request.method == "POST":
         account = request.POST['account']
-        if account == "":
-            return redirect("/")
-        else:
-            data = get_best_friend_factor(account)
-            return friends_results(request, account, data[:10])
+        return render(request, 'friend/calculating.html', {'account': account})
     else:
         return render(request, 'friend/calculating.html', {})
 
