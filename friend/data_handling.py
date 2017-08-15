@@ -29,7 +29,7 @@ def get_recent_permlinks(account):
         if author == account:
             permlinks.append(permlink)
     return permlinks
-    
+
 
 def get_num_account_history(account):
     hist = post_database_api('get_account_history', [account, -1, 0])
@@ -111,10 +111,20 @@ def get_reply_counter(account, permlinks=None):
     return reply_counter
 
 
-def get_best_friend_list(account):
-    print ('get_best_friend_list()')
-    permlinks = get_permlinks(account)
-    # print ('permlinks: ' + permlinks)
+def remove_myself(account, friend_factor):
+    ret = list(friend_factor)
+    remove_idx = -1
+    for idx, item in enumerate(ret):
+        if item[0] == account:
+            remove_idx = idx
+            break
+    if remove_idx != -1:
+        del ret[remove_idx]
+
+    return ret
+
+def get_best_friend_factor(account):
+    permlinks = get_recent_permlinks(account)
     vote_counter = get_vote_counter(account, permlinks)
     reply_counter = get_reply_counter(account, permlinks)
 
@@ -125,5 +135,5 @@ def get_best_friend_list(account):
     for k in reply_counter.keys():
         friend_factor[k] += reply_counter[k] * 1
 
-    print (friend_factor)
-    return friend_factor.most_common()[1:]
+
+    return friend_factor.most_common()
