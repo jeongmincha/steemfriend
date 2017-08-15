@@ -2,124 +2,17 @@
 <html>
   <head>
       <title>SteemFriend - Find My Best Friend On Steemit</title>
+      <meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="keywords" content="footer, address, phone, icons" />
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-      <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-      <style>
-      .page-header {
-  background-color: #1a5099;
-  margin-top: 0;
-  padding: 20px 20px 20px 40px;
-  z-index: 1;
-}
-
-.page-header h1, .page-header h1:visited, .page-header h1:active, .page-header h1:hover {
-  color: white;
-  font-size: 24pt;
-  text-decoration: none;
-}
-
-.body {
-  width: 100%;
-  height: 1000px;
-  display: table;
-  position: absolute;
-  margin-top: -25;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url({% static 'img/people-2567915_1920.jpg' %});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-
-.body-center {
-  display: table-cell;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-}
-
-.body h1 {
-  font-family: 'Patua One', cursive;
-  font-size: 36pt;
-  color: white;
-  text-shadow: 2px 2px #282c34;
-}
-
-.body p {
-  font-family: 'Patua One', cursive;
-  font-size: 24pt;
-  color: white;
-  text-shadow: 2px 2px #282c34;
-}
-
-.input-accountname {
-  text-align: center;
-  color: white;
-  border: transparent;
-  background-color: transparent;
-  width: 200px;
-  box-shadow: -7px 10px 0px -7px #1a5099, 7px 10px 0px -7px #1a5099;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-}
-
-.result-container {
-  padding: 40px;
-  height: 1000px;
-}
-
-.friend-row-top {
-  height: 60px;
-  color: white;
-}
-
-.friend-row-top span {
-  font-family: 'Patua One', cursive;
-  font-size: 24pt;
-  font-style: bold;
-}
-
-.friend-row {
-  height: 60px;
-  color: white;
-}
-
-.friend-row span {
-  font-family: 'Patua One', cursive;
-  font-size: 18pt;
-}
-
-.friend-row-name {
-  width: 250px;
-  float: left;
-}
-
-.friend-row-score {
-  width: 250px;
-  float: left;
-}
-
-.page-footer {
-  height: 100%;
-  background-color: #282c34;
-}
-
-.loader {
-  margin-top: 40px;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-      </style>
+      <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Pacifico|Passion+One|Patua+One" rel="stylesheet">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -139,13 +32,62 @@
   </head>
   <body>
     <div class="page-header">
-      <h1><a href="/">SteemFriend</a></h1>
+      <h1><a href="/">Steem<span>Friend</span></a></h1>
     </div>
     <div class="body">
       {% block content %}
       {% endblock %}
     </div>
-    <div class="page-footer">
-    </div>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+				<h3>Steem<span>Friend</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a target="_blank" href="http://steemit.com/@jeongmincha">Steemit Blog</a>
+					·
+					<a target="_blank" href="https://jeongmincha.github.io/resume-eng/">About Me</a>
+				</p>
+
+				<p class="footer-company-name">By Jeongmin Cha 2017</p>
+			</div>
+      <div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>291, Daehak-ro, Yuseong-gu</span> Daejeon, South Korea</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+82 10 4854 2778</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:jeongmin.cha@kaist.ac.kr">jeongmin.cha@kaist.ac.kr</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About Me</span>
+          I am a graduate school student majoring in Computer Science and a programming instructor at the same time. I'm into data analysis and block chain technology.
+				</p>
+
+				<div class="footer-icons">
+
+					<a target="_blank" href="https://www.facebook.com/cjm9236"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://www.twitter.com/cjm9236"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://www.linkedin.com/in/jeongmincha/"><i class="fa fa-linkedin"></i></a>
+					<a target="_blank" href="https://www.github.com/jeongmincha"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+		</footer>
   </body>
 </html>
