@@ -7,6 +7,20 @@
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Pacifico|Passion+One|Patua+One" rel="stylesheet">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $("#input_form").submit(function(err, response) {
+          $("#input_container").attr("style", "display: none");
+          $("#wait_section").attr("style", "display: block");
+
+          $("#welcome_account_text").text(function(i, oldText){
+            return "Thanks! @" + $("#account_name").val();
+          });
+          return true;
+        });
+      });
+      </script>
   </head>
   <body>
     <div class="page-header">

@@ -2,13 +2,21 @@
 
 {% block content %}
 <center class="body-center">
-  <h1>Who's your best friend on steemit?</h1>
-  <p>Please write your account name on steemit.</p>
-  <form action="{% url 'friend:find_friends' %}" method="post">
-    {% csrf_token %}
-    <input class="input-accountname" placeholder="jeongmincha" type="text" name="account" required/>
-    <br /><br />
-    <button class="w3-btn w3-blue" type="submit" value="Check My Friends">Check My Friends!</button>
-  </form>
+  <div id="input_container" style="display: block;">
+    <h1>Who's your best friend on steemit?</h1>
+    <p>Please write your account name on steemit.</p>
+    <form id="input_form" action="{% url 'friend:find_friends' %}" method="post">
+      {% csrf_token %}
+      <input id="account_name" class="input-accountname" placeholder="jeongmincha" type="text" name="account" required/>
+      <br /><br />
+      <button class="w3-btn w3-blue" type="submit" value="Check My Friends">Check My Friends!</button>
+    </form>
+  </div>
+  <div id="wait_section" style="display: none;">
+    <h1 id="welcome_account_text">Thanks! @{{ account }}. </h1>
+    <p>We're calculating friendships between you and your friends...</p>
+    <p>It may take about a minute.</p>
+    <div class="loader"></div>
+  </div>
 </center>
 {% endblock %}
