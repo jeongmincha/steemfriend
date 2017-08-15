@@ -14,7 +14,7 @@ def find_friends(request):
             return redirect("/")
         else:
             data = get_best_friend_factor(account)
-            return friends_results(request, account, data)
+            return friends_results(request, account, data[:10])
     else:
         return render(request, 'friend/calculating.html', {})
 
