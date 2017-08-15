@@ -4,7 +4,122 @@
       <title>SteemFriend - Find My Best Friend On Steemit</title>
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+      <style>
+      .page-header {
+  background-color: #1a5099;
+  margin-top: 0;
+  padding: 20px 20px 20px 40px;
+  z-index: 1;
+}
+
+.page-header h1, .page-header h1:visited, .page-header h1:active, .page-header h1:hover {
+  color: white;
+  font-size: 24pt;
+  text-decoration: none;
+}
+
+.body {
+  width: 100%;
+  height: 1000px;
+  display: table;
+  position: absolute;
+  margin-top: -25;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url({% static 'img/people-2567915_1920.jpg' %});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.body-center {
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+}
+
+.body h1 {
+  font-family: 'Patua One', cursive;
+  font-size: 36pt;
+  color: white;
+  text-shadow: 2px 2px #282c34;
+}
+
+.body p {
+  font-family: 'Patua One', cursive;
+  font-size: 24pt;
+  color: white;
+  text-shadow: 2px 2px #282c34;
+}
+
+.input-accountname {
+  text-align: center;
+  color: white;
+  border: transparent;
+  background-color: transparent;
+  width: 200px;
+  box-shadow: -7px 10px 0px -7px #1a5099, 7px 10px 0px -7px #1a5099;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+.result-container {
+  padding: 40px;
+  height: 1000px;
+}
+
+.friend-row-top {
+  height: 60px;
+  color: white;
+}
+
+.friend-row-top span {
+  font-family: 'Patua One', cursive;
+  font-size: 24pt;
+  font-style: bold;
+}
+
+.friend-row {
+  height: 60px;
+  color: white;
+}
+
+.friend-row span {
+  font-family: 'Patua One', cursive;
+  font-size: 18pt;
+}
+
+.friend-row-name {
+  width: 250px;
+  float: left;
+}
+
+.friend-row-score {
+  width: 250px;
+  float: left;
+}
+
+.page-footer {
+  height: 100%;
+  background-color: #282c34;
+}
+
+.loader {
+  margin-top: 40px;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+      </style>
       <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Pacifico|Passion+One|Patua+One" rel="stylesheet">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
