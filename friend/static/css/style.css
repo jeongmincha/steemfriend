@@ -5,7 +5,7 @@
   z-index: 1;
 }
 
-.page-header h1, .page-header h1:visited, .page-header h1:active, .page-header h1:hover {
+.page-header a, .page-header a:visited, .page-header a:active, .page-header a:hover {
   color: #ffffff;
   font: normal 36px 'Cookie', cursive;
   margin: 0;
