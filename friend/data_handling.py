@@ -135,5 +135,6 @@ def get_best_friend_factor(account):
     for k in reply_counter.keys():
         friend_factor[k] += reply_counter[k] * 1
 
-
-    return friend_factor.most_common()
+    friend_factor = friend_factor.most_common()
+    friend_factor = remove_myself(account, friend_factor)
+    return friend_factor

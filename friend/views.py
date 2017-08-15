@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .data_handling import get_best_friend_list
+from .data_handling import get_best_friend_factor
 from .models import User
 
 # Create your views here.
@@ -13,7 +13,7 @@ def find_friends(request):
         if account == "":
             return redirect("/")
         else:
-            data = get_best_friend_list(account)
+            data = get_best_friend_factor(account)
             return friends_results(request, account, data)
     else:
         return render(request, 'friend/calculating.html', {})
