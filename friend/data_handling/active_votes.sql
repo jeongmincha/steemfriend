@@ -1,5 +1,5 @@
-DECLARE @Author VARCHAR(50) = 
-DECLARE @TopRecentPosts INT = 500
+DECLARE @Author VARCHAR(50) =
+DECLARE @TopRecentPosts INT = 20
 
 SELECT TOP(@TopRecentPosts) author, permlink, active_votes, reblogged_by, children
     FROM Comments (NOLOCK)

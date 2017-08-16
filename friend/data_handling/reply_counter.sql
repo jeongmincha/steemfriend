@@ -1,5 +1,5 @@
-DECLARE @Author VARCHAR(50) = 
-DECLARE @TopRecentPosts INT = 150
+DECLARE @Author VARCHAR(50) =
+DECLARE @TopRecentPosts INT = 20
 
 ;WITH a AS (
     SELECT author, permlink
