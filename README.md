@@ -1,5 +1,5 @@
 # steemfriend
-http://steemfriend.com 의 django project 코드
+자기랑 가장 친한 steemit 플랫폼의 친구를 찾아주는 서비스 (서비스 종료됨)
 
 ## How to serve
 ```
